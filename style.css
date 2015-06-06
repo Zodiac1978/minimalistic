@@ -1,0 +1,432 @@
+/*
+Theme Name: Minimalistic
+Author: Daniela Wibbeke
+Author URI: http://danielawibbeke.de
+Description: Mein erstes Wordpress Theme
+Version: 1.0
+*/
+
+
+
+/* Basic */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f4f7fa;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 120%;
+}
+a {
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 120%;
+	margin: 0;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1160px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.row::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.row > * {
+    float: left;
+}
+.row > .column {
+    width: 33.3333%;
+}
+
+.row > .column-width {
+	width: 66.6667%;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+/* header */
+header {
+    background: #25303d;
+    display: block;
+    height: 100%;
+}
+
+#head h1 {
+	margin: 0;
+	float: left;
+	line-height: 90px;
+}
+
+#head h1 a {
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 25px;
+}
+header #headTop {
+    border-bottom: 1px solid #1e2833;
+    height: 90px;
+    width: 100%;
+}
+header #headBottom {
+    clear: both;
+    padding: 85px 0 60px;
+}
+header #headBottom h2 {
+    color: #fff;
+    display: inline;
+    font-family: "Lato",sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 0.25px;
+    margin: 0;
+}
+header #headBottom p {
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.25px;	
+}
+
+
+/* Navigation */
+#nav {
+	float: right;
+	line-height: 90px;
+}
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#nav ul > li {
+	display: inline-block;
+	margin-left: 25px;
+}
+#nav ul > li > a {
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;	
+	font-weight: 700;
+	letter-spacing: 1px;
+    padding: 0 0 10px;
+    line-height: 90px;
+    border-bottom: 2px solid #25303d;
+}
+#nav a:hover, a:focus {
+	color: #c7c8c9;
+	border-bottom: 2px solid #fff;
+}
+
+
+/* Artikel */
+#articles-wrapper {
+	margin-bottom: 170px;
+}
+#articles-wrapper #articles .headline {
+	text-align: center;
+	color: #25303d;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;	
+	font-weight: 700;
+	padding: 70px 0px;
+}
+#articles-wrapper #articles .border {
+    background: none repeat scroll 0 0 #d4d5d7;
+    display: block;
+    height: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 50px;
+}
+#articles-wrapper #articles {
+	max-width:1200px;
+}
+#articles section {
+    background: none repeat scroll 0 0 #fff;
+    margin: 15px;
+    box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    -moz-box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    border-radius: 4px;
+}
+#articles section .post-content {
+	padding: 25px 20px;
+}
+#articles section .image {
+    background-size: cover !important;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#articles section .image img {
+	width: 100%;
+	height:auto;
+}
+#articles section .post-date {
+	color: #959ea1;
+	font-size: 12px;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.1px;
+	margin-bottom: 20px;
+}
+#articles section h4 {
+	color: #333333;
+	font-size: 20px;
+	line-height: 24px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.1px;
+}
+#articles section p {
+	color: #1c1c1c;
+	font-size: 16px;
+	line-height: 26px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1px;
+}
+#articles section .article-info {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}
+#articles section .article-info .post-category {
+	color: #3e5560;
+	font-weight: 500;
+	font-size: 12px;
+	float: left;
+}
+#articles section .article-info .post-category:before {
+	color: #3e5560;
+    content: "";
+    font-family: FontAwesome;
+    padding-right: 8px;
+}
+#articles section .article-info .post-link {
+	float: right;
+}
+#articles section .article-info .post-link:after {
+	color: #3e5560;
+    content: "";
+    font-family: FontAwesome;
+    padding-left: 8px;
+}
+.post-link a {
+	color: #3e5560;
+	font-weight: 500;
+	padding: 0 0 5px;
+	border-bottom: 2px solid #fff;
+}
+.post-link a:hover, a:focus {
+	color: #162126;
+	padding: 0 0 5px;
+	border-bottom: 2px solid #25303d; 
+}
+.post-categories {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: inline-block;
+}
+.post-categories > li > a {
+	color: #3e5560;
+}
+
+/* Blog */
+#headBottom {
+    padding: 35px 0;
+}
+#sidebar {
+    background: none repeat scroll 0 0 #fff;
+    margin: 15px 0px;
+    box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    -moz-box-shadow: 0 1px 3px 0 rgba(218, 221, 223, 1);
+    border-radius: 4px;	
+    padding: 25px 20px;
+}
+
+#content-wrapper #content section {
+    margin: 15px;
+}
+
+/* Content */
+#content-wrapper .content-area .headline {
+	text-align: center;
+	color: #25303d;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;	
+	font-weight: 700;
+	padding: 70px 0px;
+}
+#content-wrapper .content-area .border {
+    background: none repeat scroll 0 0 #d4d5d7;
+    display: block;
+    height: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    width: 50px;
+}
+#content-wrapper .content-area {
+    margin-bottom: 150px;
+    max-width: 1200px;
+}
+
+#content-wrapper #content blockquote {
+    color: #25303d;
+    font-family: "Lato",sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 0;
+}
+#content-wrapper #content strong {
+	color: #959ea1;
+}
+#content-wrapper #sidebar .lieblingslied {
+    border-bottom: 1px solid #dfe1e5;
+    border-top: 1px solid #dfe1e5;
+    color: #25303d;
+    font-family: "Lato",sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 30px 0;
+    padding: 20px 0;
+}
+#content-wrapper #sidebar .lieblingslied:before {
+	color: #3e5560;
+    content: "";
+    color: #25303d;
+    font-size: 20px;
+    font-family: FontAwesome;
+    padding-right: 8px;	
+    font-weight: normal;
+}
+
+
+
+/* Sidebar */
+
+#sidebar h4 {
+	color: #526172;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    background: #eceff1;
+    bottom: 0;
+    clear: both;
+    padding: 20px 0;
+    position: relative;   
+    text-align: center;
+    width: 100%;
+}
+footer .footer-links a {
+	color: #959ea1;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: 0px 10px;
+}
+footer .footer-links a:hover, a:focus {
+	color: #7f8789;
+}
+
+@media all and (max-width: 990px) {
+	.row > .column  {
+	    width: 50%;
+	}
+	#articles section {
+	    margin: 20px;
+	}
+
+}
+@media all and (max-width: 640px) {
+	.row > .column  {
+	    width: 100%;
+	}
+	#articles section {
+	    margin: 0 0 25px;
+	}
+	header #headTop {
+	    border-bottom: 1px solid #1e2833;
+	    height: 60px;
+	}
+	header #headBottom {
+	    clear: both;
+	    padding: 35px 0 40px;
+	}
+	header #headBottom h2 {
+	    font-size: 25px;
+	}
+	header #headBottom p {
+	    font-size: 18px;
+	}
+	#head h1 {
+	    float: none;
+	    line-height: 60px;
+	    margin: 0;
+	    width: 100%;
+	}
+	#head h1 a {
+    	font-size: 20px;
+	}
+	#nav {
+	    float: left;
+	    line-height: 40px;
+	    margin-top: 30px;
+	}
+	#nav ul > li {
+	    display: block;
+	    margin-left: 0;
+	}
+	#nav ul > li > a {
+    	line-height: 40px;
+	}
+
+	
+
+
+}
+
+
+
